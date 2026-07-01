@@ -69,7 +69,7 @@ display(html`
         <h2 style="margin-top: 0; color: var(--theme-foreground-muted);">${medals[i]}</h2>
         <div style="font-size: 5rem; line-height: 1.2;">${team.Flag}</div>
         <h3>${team.Name}</h3>
-        <h1 style="color: ${colors[i]}; margin-bottom: 0;">${team.Score} pts</h1>
+        <h1 style="color: ${colors[i]}; margin-bottom: 0;">${Math.round(team.Score)} pts</h1>
       </div>
     `)}
   </div>
@@ -86,12 +86,11 @@ view(Inputs.table(currentScores, {
     "ID", 
     "Payload", 
     "Distance", 
-    "Current", 
+    "Current Penalty", 
     "Loading", 
     "Unloading", 
     "Penalty", 
     "Takeoff", 
-    "Preliminary Score", 
     "Score"
   ],
   layout: "auto",
